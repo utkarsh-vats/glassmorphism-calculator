@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Potta One", cursive;
+    background-color: steelblue;
+    background-image: url(./bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    position: absolute ;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 10;
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container .calculator {
+    position: relative;
+    display: grid;
+}
+
+.container .calculator .result {
+    grid-column: span 4;
+    height: 288px;
+    width: 600px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-family: "Potta One", cursive;
+    font-size: 4rem;
+    /* background: transparent; */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    /* color: #312c51; */
+    color: #f8f1f1;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.container .calculator .num {
+    display: grid;
+    place-items: center;
+    height: 150px;
+    width: 150px;
+    /* color: #312c51; */
+    color: #f8f1f1;
+    font-weight: 400;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.5s;
+}
+
+.container .calculator .num:hover {
+    transition: 0s;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.container .calculator .num:active {
+    background: rgba(60, 255, 60, 0.6);
+    color: #312c51;
+}
+
+.container .calculator .clear {
+    grid-column: span 2;
+    width: 100%;
+}
+
+.container .calculator .equals {
+    grid-row: span 2;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+}
